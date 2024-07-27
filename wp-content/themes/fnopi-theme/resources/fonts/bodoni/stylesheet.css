@@ -1,0 +1,17 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Bodoni';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch:normal;
+    src: url('../fonts/bodoni/BodoniModa_18pt-Regular.woff2') format('woff2'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Bodoni';
+    font-style: italic;
+    font-weight: 400;
+    font-stretch:normal;
+    src: url('../fonts/bodoni/BodoniModa_18pt-Italic.woff2') format('woff2'),
+}

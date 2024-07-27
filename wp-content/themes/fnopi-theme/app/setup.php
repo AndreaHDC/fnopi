@@ -69,6 +69,11 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('post-thumbnails');
 
+    add_theme_support( 'align-wide' );
+    
+	add_theme_support( 'wp-block-styles' );
+
+
     /**
      * Enable responsive embed support.
      *
@@ -97,6 +102,14 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
      */
     add_theme_support('customize-selective-refresh-widgets');
+
+
+    //editor styles
+    add_theme_support('editor-styles');
+    add_editor_style(asset('editor.css')->relativePath(get_theme_file_path()));
+
+
+
 }, 20);
 
 /**

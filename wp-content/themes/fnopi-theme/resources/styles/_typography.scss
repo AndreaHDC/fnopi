@@ -1,0 +1,10 @@
+@import '../fonts/lato/stylesheet.css';
+@import '../fonts/bodoni/stylesheet.css';
+
+h1,.h1{
+    @apply font-fnopi-heading text-6xl font-normal tracking-tight;
+}
+
+h2,.h2{
+    @apply font-fnopi-heading text-5xl font-normal tracking-tight;
+}

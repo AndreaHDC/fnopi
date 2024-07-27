@@ -23,7 +23,7 @@ export default async (app) => {
    *
    * @see {@link https://bud.js.org/reference/bud.setPublicPath}
    */
-  app.setPublicPath('/wp-content/themes/sage/public/');
+  app.setPublicPath('/wp-content/themes/fnopi-theme/public/');
 
   /**
    * Development server settings
@@ -50,6 +50,10 @@ export default async (app) => {
       background: {
         backgroundImage: true,
       },
+      layout: {
+        contentSize: '1700px',
+        wideSize: '1920px'
+      },
       color: {
         custom: false,
         customDuotone: false,
@@ -68,6 +72,7 @@ export default async (app) => {
       },
       spacing: {
         padding: true,
+        margin:true,
         units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
       },
       typography: {

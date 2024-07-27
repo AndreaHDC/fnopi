@@ -1,0 +1,18 @@
+:where(.wp-block-group.has-background) {
+    padding: 0;
+}
+.wp-block {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.editor-styles-wrapper {
+    @apply font-fnopi-body text-fnopi-black;
+    h1,.h1{
+        @apply font-fnopi-heading text-6xl font-normal tracking-tight;
+    }
+    
+    h2,.h2{
+        @apply font-fnopi-heading text-5xl font-normal tracking-tight;
+    }
+}
