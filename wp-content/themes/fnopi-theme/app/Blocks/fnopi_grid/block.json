@@ -1,0 +1,14 @@
+{
+    "name": "fnopi/grid",
+    "title": "Fnopi Grid",
+    "description": "The Fnopi Grid",
+    "style": [],
+    "category": "theme",
+    "icon": "slides",
+    "keywords": ["fnopi","grid"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "fnopi_grid_block_render_callback"
+    },
+    "align": "full"
+}

@@ -63,3 +63,10 @@ collect(['setup', 'filters'])
             );
         }
     });
+
+
+
+function  fnopi_grid_block_render_callback($block)
+{
+    echo view('blocks/fnopi_grid', ['block' => $block]);
+}

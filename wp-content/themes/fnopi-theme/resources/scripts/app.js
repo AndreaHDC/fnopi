@@ -1,4 +1,15 @@
 import domReady from '@roots/sage/client/dom-ready';
+import {
+  Swiper,
+  Pagination,
+  Navigation,
+  Autoplay,
+  FreeMode,
+  Scrollbar,
+  EffectFade,
+  Mousewheel,
+} from 'swiper';
+Swiper.use([Autoplay,EffectFade,Pagination,Scrollbar,FreeMode,Navigation]);
 
 /**
  * Application entrypoint
@@ -77,6 +88,83 @@ domReady(async () => {
   checkScroll();
   // Add event listener to check scroll on page scroll
   window.addEventListener('scroll', checkScroll);
+
+
+
+  
+  const gridBox1 = new Swiper("#grid-box-1 .swiper", {
+    effect: 'fade', // Use fade effect for crossfade
+    fadeEffect: {
+        crossFade: true
+    },
+    autoplay: {
+        delay: 5000, // Set autoplay delay to 5 seconds
+        disableOnInteraction: false // Continue autoplay even after user interaction
+    },
+    speed: 1500, // Adjust the transition speed (in milliseconds) to make it slower
+    loop: false, // Do not loop the slides
+    allowTouchMove: false, // Disable user interaction
+  });
+
+
+  const gridBox3 = new Swiper("#grid-box-3 .swiper", {
+    effect: 'fade', // Use fade effect for crossfade
+    fadeEffect: {
+        crossFade: true
+    },
+    autoplay: {
+        delay: 6000, // Set autoplay delay to 5 seconds
+        disableOnInteraction: false // Continue autoplay even after user interaction
+    },
+    speed: 1500, // Adjust the transition speed (in milliseconds) to make it slower
+    loop: false, // Do not loop the slides
+    allowTouchMove: false, // Disable user interaction
+  });
+
+  const gridBox4 = new Swiper("#grid-box-4 .swiper", {
+    effect: 'fade', // Use fade effect for crossfade
+    fadeEffect: {
+        crossFade: true
+    },
+    autoplay: {
+        delay: 4000, // Set autoplay delay to 5 seconds
+        disableOnInteraction: false // Continue autoplay even after user interaction
+    },
+    speed: 1500, // Adjust the transition speed (in milliseconds) to make it slower
+    loop: false, // Do not loop the slides
+    allowTouchMove: false, // Disable user interaction
+  });
+
+  const gridBox5 = new Swiper("#grid-box-5 .swiper", {
+    effect: 'fade', // Use fade effect for crossfade
+    fadeEffect: {
+        crossFade: true
+    },
+    autoplay: {
+        delay: 2000, // Set autoplay delay to 5 seconds
+        disableOnInteraction: false // Continue autoplay even after user interaction
+    },
+    speed: 1500, // Adjust the transition speed (in milliseconds) to make it slower
+    loop: false, // Do not loop the slides
+    allowTouchMove: false, // Disable user interaction
+  });
+
+
+  const gridBox2 = new Swiper("#grid-box-2 .swiper", {
+    effect: 'fade', // Use fade effect for crossfade
+    fadeEffect: {
+        crossFade: true
+    },
+    autoplay: {
+        delay: 3000, // Set autoplay delay to 5 seconds
+        disableOnInteraction: false // Continue autoplay even after user interaction
+    },
+    speed: 1500, // Adjust the transition speed (in milliseconds) to make it slower
+    loop: false, // Do not loop the slides
+    allowTouchMove: false, // Disable user interaction
+  });
+
+
 
 });
 

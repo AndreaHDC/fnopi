@@ -32,3 +32,17 @@ if (function_exists('acf_add_options_page')) {
     );
 }
 
+
+// acf blocks
+add_action('init', 'App\\register_acf_blocks');
+function register_acf_blocks()
+{
+    $custom_blocks = ['fnopi_grid'];
+    foreach ($custom_blocks as $custom_block) {
+        register_block_type(__DIR__ . '/Blocks/'.$custom_block);
+        $function = $custom_block.'_block_render_callback';
+    }
+}
+
+
+

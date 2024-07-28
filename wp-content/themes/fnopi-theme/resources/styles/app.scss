@@ -24,6 +24,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 @import 'header';
 @import 'footer';
 
+@import 'blocks';
 
 body{
     @apply bg-fnopi-background font-fnopi-body text-fnopi-black font-light;
