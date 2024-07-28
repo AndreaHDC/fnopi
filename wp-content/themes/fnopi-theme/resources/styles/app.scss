@@ -22,6 +22,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 
 @import 'typography';
 @import 'header';
+@import 'footer';
 
 
 body{
@@ -30,7 +31,6 @@ body{
 
 main{
     @apply px-6 lg:px-[60px] 2xl:px-[120px];
-    min-height: 2000px;
 }
 
 :where(.wp-block-group.has-background) {

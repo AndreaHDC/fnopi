@@ -1,0 +1,14 @@
+#fnopi-footer{
+
+    .menu-footer-navigation-container{
+        ul{
+            @apply flex flex-col gap-3;
+
+            a{
+                @apply uppercase text-lg hover:underline;
+            }
+        }
+
+       
+    }
+}
