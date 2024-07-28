@@ -3,14 +3,34 @@
 @tailwind utilities;
 
 
+
+$hamburger-padding-x           : 0px !default;
+$hamburger-padding-y           : 0px !default;
+$hamburger-layer-width         : 32px !default;
+$hamburger-layer-height        : 3px !default;
+$hamburger-layer-spacing       : 5px !default;
+$hamburger-layer-color         : #B3C8CD !default;
+$hamburger-layer-border-radius : 3px !default;
+$hamburger-hover-opacity       : 1 !default;
+$hamburger-active-layer-color  : $hamburger-layer-color !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
+@import "../../node_modules/swiper/swiper-bundle";
+
+
+
+
 @import 'typography';
+@import 'header';
+
 
 body{
-    @apply bg-fnopi-background font-fnopi-body text-fnopi-black;
+    @apply bg-fnopi-background font-fnopi-body text-fnopi-black font-light;
 }
 
 main{
-    @apply px-6 lg:px-[60px] 2xl:px-[120px]
+    @apply px-6 lg:px-[60px] 2xl:px-[120px];
+    min-height: 2000px;
 }
 
 :where(.wp-block-group.has-background) {

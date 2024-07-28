@@ -6,3 +6,12 @@
     font-stretch:normal;
     src: url('../fonts/lato/Lato-Regular.woff2') format('woff2'),
 }
+
+@font-face {
+    font-display: swap;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-stretch:normal;
+    src: url('../fonts/lato/Lato-Light.woff2') format('woff2'),
+}

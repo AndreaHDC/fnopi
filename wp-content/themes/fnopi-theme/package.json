@@ -24,5 +24,9 @@
     "@roots/bud-tailwindcss": "6.20.0",
     "@roots/sage": "6.20.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "hamburgers": "^1.2.1",
+    "swiper": "^9.4.1"
+
+  }
 }
