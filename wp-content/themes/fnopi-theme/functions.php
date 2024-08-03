@@ -65,6 +65,12 @@ collect(['setup', 'filters'])
     });
 
 
+    
+
+function  fnopi_video_block_render_callback($block)
+{
+    echo view('blocks/fnopi_video', ['block' => $block]);
+}
 
 function  fnopi_grid_block_render_callback($block)
 {

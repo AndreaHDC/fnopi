@@ -1,0 +1,13 @@
+{
+    "name": "fnopi/video",
+    "title": "Fnopi Video",
+    "description": "The Fnopi Video",
+    "style": [],
+    "category": "theme",
+    "icon": "video",
+    "keywords": ["fnopi","video"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "fnopi_video_block_render_callback"
+    }
+}

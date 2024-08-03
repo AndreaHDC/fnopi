@@ -136,3 +136,16 @@
         }
     }
 }
+
+.fnopi-video{
+    img{
+        @apply transition-transform duration-700;
+    }
+
+    &:hover{
+        img{
+            @apply scale-110;
+        }
+        
+    }
+}

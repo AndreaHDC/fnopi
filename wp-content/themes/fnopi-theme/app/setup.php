@@ -17,6 +17,16 @@ add_action('wp_enqueue_scripts', function () {
     bundle('app')->enqueue();
 }, 100);
 
+
+function enqueue_fslightbox_assets() {
+    // Enqueue FsLightbox CSS
+    wp_enqueue_style( 'fslightbox-css', 'https://cdn.jsdelivr.net/npm/fslightbox/index.css' );
+
+    // Enqueue FsLightbox JS
+    wp_enqueue_script( 'fslightbox-js', 'https://cdn.jsdelivr.net/npm/fslightbox/index.js', array(), null, true );
+}
+add_action( 'wp_enqueue_scripts', 'App\\enqueue_fslightbox_assets' );
+
 /**
  * Register the theme assets with the block editor.
  *

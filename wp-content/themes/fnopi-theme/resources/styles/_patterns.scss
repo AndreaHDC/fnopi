@@ -11,3 +11,30 @@
     }
    
 }
+
+.primo-piano-wrapper{
+    @apply py-12 lg:py-[100px] px-6 lg:px-[60px] 2xl:px-[120px];
+    .title-wrapper{
+        @apply border-b border-solid border-fnopi-black pb-3;
+    }
+    .title{
+        @apply flex flex-col md:flex-row justify-between w-full;
+        em{
+            @apply text-white;
+        }
+    }
+    .wp-element-button{
+        @apply tracking-wider w-fit mt-3 mb-3 md:mb-0 md:mt-0 bg-fnopi-blue text-fnopi-black h-fit inline-block text-xs font-bold px-5 py-2 rounded-full md:top-[32px] lg:top-[36px] relative hover:bg-fnopi-dark-blue hover:text-white transition-colors;
+
+    }
+    .content{
+        @apply max-w-[900px] mx-auto;
+        a{
+            @apply inline-block mt-6 font-bold underline hover:no-underline;
+        }
+    }
+
+    .fnopi-video{
+        @apply p-3 md:p-6 border border-solid border-fnopi-black;
+    }
+}

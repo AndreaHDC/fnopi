@@ -8,3 +8,7 @@ h1,.h1{
 h2,.h2{
     @apply font-fnopi-heading text-3xl lg:text-5xl font-normal tracking-tight;
 }
+
+h3,.h3{
+    @apply font-fnopi-heading text-xl lg:text-2xl font-normal tracking-tight;
+}

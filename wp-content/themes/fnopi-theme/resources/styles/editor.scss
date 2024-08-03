@@ -1,6 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import 'blocks';
 @import 'patterns';
-
+@import '../fonts/lato/stylesheet.css';
+@import '../fonts/bodoni/stylesheet.css';
 :where(.wp-block-group.has-background) {
     padding: 0;
 }
@@ -17,5 +22,19 @@
     
     h2,.h2{
         @apply font-fnopi-heading text-5xl font-normal tracking-tight;
+    }
+    h3,.h3{
+        @apply font-fnopi-heading text-xl lg:text-2xl font-normal tracking-tight;
+    }
+
+
+    .primo-piano-wrapper{
+        
+        .content{
+            max-width: 900px !important;
+            margin-left: auto !important;
+            margin-right: auto !important
+            
+        }
     }
 }
