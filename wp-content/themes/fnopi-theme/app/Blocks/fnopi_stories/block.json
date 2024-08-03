@@ -1,0 +1,14 @@
+{
+    "name": "fnopi/stories",
+    "title": "Fnopi Stories",
+    "description": "The Fnopi Stories",
+    "style": [],
+    "category": "theme",
+    "icon": "slides",
+    "keywords": ["fnopi","stories"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "fnopi_stories_block_render_callback"
+    },
+    "align": "full"
+}

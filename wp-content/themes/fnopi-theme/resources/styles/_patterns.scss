@@ -1,0 +1,13 @@
+.home-intro{
+    
+    h1{
+        em{
+            @apply text-fnopi-green;
+        }
+    }
+
+    p{
+        @apply max-w-[860px] mx-auto;
+    }
+   
+}

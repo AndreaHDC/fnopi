@@ -6,6 +6,7 @@ const config = {
       colors: {
         'fnopi-background':'#FCFDF5',
         'fnopi-blue':'#B3C8CD',
+        'fnopi-dark-blue':'#016976',
         'fnopi-dark-green':'#8AB185',
         'fnopi-gray':'#707070',
         'fnopi-green':'#A5BE3A',

@@ -40,6 +40,11 @@
           "slug": "fnopi-blue"
         },
         {
+          "color": "#016976",
+          "name": "Fnopi-dark-blue",
+          "slug": "fnopi-dark-blue"
+        },
+        {
           "color": "#8ab185",
           "name": "Fnopi-dark-green",
           "slug": "fnopi-dark-green"

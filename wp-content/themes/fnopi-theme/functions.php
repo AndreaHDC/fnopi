@@ -70,3 +70,9 @@ function  fnopi_grid_block_render_callback($block)
 {
     echo view('blocks/fnopi_grid', ['block' => $block]);
 }
+
+function  fnopi_stories_block_render_callback($block)
+{
+    echo view('blocks/fnopi_stories', ['block' => $block]);
+}
+

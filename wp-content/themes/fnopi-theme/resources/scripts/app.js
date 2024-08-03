@@ -92,6 +92,18 @@ domReady(async () => {
 
 
   
+
+  const fnopiSliderMobile = new Swiper("#fnopi-slider-mobile .swiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 1500,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true, // Allows clicking on pagination bullets to change slides
+    },
+  });
+
+  
   const gridBox1 = new Swiper("#grid-box-1 .swiper", {
     effect: 'fade', // Use fade effect for crossfade
     fadeEffect: {
