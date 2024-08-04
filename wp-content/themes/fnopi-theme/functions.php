@@ -63,8 +63,11 @@ collect(['setup', 'filters'])
             );
         }
     });
-
-
+    
+function  fnopi_timeline_archive_block_render_callback($block)
+{
+    echo view('blocks/fnopi_timeline_archive', ['block' => $block]);
+}
     
 function  fnopi_home_timeline_block_render_callback($block)
 {

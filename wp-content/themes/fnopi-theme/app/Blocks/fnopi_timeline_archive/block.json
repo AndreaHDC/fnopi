@@ -1,0 +1,14 @@
+{
+    "name": "fnopi/timelinearchive",
+    "title": "Fnopi Home Archive",
+    "description": "The Home Archive",
+    "style": [],
+    "category": "theme",
+    "icon": "slides",
+    "keywords": ["fnopi","timeline"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "fnopi_timeline_archive_block_render_callback"
+    },
+    "align": "full"
+}

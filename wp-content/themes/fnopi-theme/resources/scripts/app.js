@@ -90,8 +90,38 @@ domReady(async () => {
   window.addEventListener('scroll', checkScroll);
 
   
+  const fnopiTimelineArchive = new Swiper("#fnopi-timeline-archive .swiper", {
+    slidesPerView: 1.5,
+    spaceBetween: 0,
+    speed: 1500,
+    slidesOffsetBefore:5,
+    slidesOffsetAfter:5,
 
-  
+    breakpoints: {
+     
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesOffsetBefore:20,
+        slidesOffsetAfter:20,
+      },
+
+      1281: {
+        slidesPerView: 5,
+        spaceBetween: 0,
+      },
+    },
+
+
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      dragSize:100,
+      snapOnRelease:true
+    },
+
+  });
+
   const fnopiHomeTimeline = new Swiper("#fnopi-home-timeline .swiper", {
     slidesPerView: 1.5,
     spaceBetween: 20,
