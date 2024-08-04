@@ -89,8 +89,60 @@ domReady(async () => {
   // Add event listener to check scroll on page scroll
   window.addEventListener('scroll', checkScroll);
 
+  
 
+  
+  const fnopiHomeTimeline = new Swiper("#fnopi-home-timeline .swiper", {
+    slidesPerView: 1.5,
+    spaceBetween: 20,
+    speed: 1500,
+    slidesOffsetBefore:15,
+    slidesOffsetAfter:15,
+   
+    breakpoints: {
+     
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesOffsetBefore:20,
+        slidesOffsetAfter:20,
+      },
 
+      1281: {
+        slidesPerView: 5,
+        spaceBetween: 60,
+        slidesOffsetBefore:100,
+        slidesOffsetAfter:100,
+      },
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      dragSize:30,
+      snapOnRelease:true
+    },
+  });
+  
+
+  const fnopiStories = new Swiper("#fnopi-stories .swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 1500,
+    breakpoints: {
+     
+      768: {
+        slidesPerView: 2,
+      },
+
+      1281: {
+        slidesPerView: 4,
+      },
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true, // Allows clicking on pagination bullets to change slides
+    },
+  });
   
 
   const fnopiSliderMobile = new Swiper("#fnopi-slider-mobile .swiper", {

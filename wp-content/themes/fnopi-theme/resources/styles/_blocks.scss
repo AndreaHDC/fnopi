@@ -104,6 +104,16 @@
 // ..stories
 #fnopi-stories{
 
+    .swiper-pagination-bullet{
+        opacity: 100;
+        background-color: transparent;
+        @apply rounded-none w-[10px] h-[10px] border border-solid border-white;
+        &.swiper-pagination-bullet-active{
+            background-color: #fff;
+        }
+    }
+    
+
     .image{
         img{
             @apply transition-transform duration-700;
@@ -147,5 +157,43 @@
             @apply scale-110;
         }
         
+    }
+}
+
+
+#fnopi-home-timeline{
+
+   
+    .swiper-slide{
+        height: auto !important;
+
+        &.last{
+            margin-right: 100px !important
+        }
+
+        p{
+            @apply font-fnopi-heading text-6xl mb-24 mt-0;
+        }
+
+        h5{
+            @apply uppercase font-bold text-sm;
+        }
+    }
+    .swiper{
+        width: 100%;
+    }
+
+    // .swiper-slide:first-child {
+    //     margin-left: 200px;
+    // }
+
+    .swiper-scrollbar{
+        @apply bottom-[120px];
+        height: 1px;
+        background-color: #000
+    }
+
+    .swiper-scrollbar-drag{
+        @apply h-[30px] bg-fnopi-green rounded-full top-[-15px];
     }
 }

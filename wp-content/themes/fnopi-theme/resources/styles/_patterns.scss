@@ -1,5 +1,5 @@
 .home-intro{
-    
+    @apply py-[50px] lg:py-[100px];
     h1{
         em{
             @apply text-fnopi-green;
@@ -10,6 +10,27 @@
         @apply max-w-[860px] mx-auto;
     }
    
+}
+
+.timeline-home-wrapper{
+    @apply py-12 lg:py-[100px] px-6 lg:px-[60px] 2xl:px-[120px];
+    .title-wrapper{
+        @apply border-b border-solid border-fnopi-black pb-3;
+    }
+    .title{
+        @apply flex flex-col md:flex-row justify-between w-full;
+        em{
+            @apply text-fnopi-green;
+        }
+    }
+    .wp-element-button{
+        @apply tracking-wider w-fit mt-3 mb-3 md:mb-0 md:mt-0 bg-fnopi-blue text-fnopi-black h-fit inline-block text-xs font-bold px-5 py-2 rounded-full md:top-[32px] lg:top-[36px] relative hover:bg-fnopi-dark-blue hover:text-white transition-colors;
+
+    }
+
+    p{
+        @apply mt-6 md:mt-12 mx-auto max-w-[900px];
+    }
 }
 
 .primo-piano-wrapper{

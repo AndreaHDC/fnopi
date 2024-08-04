@@ -66,6 +66,10 @@ collect(['setup', 'filters'])
 
 
     
+function  fnopi_home_timeline_block_render_callback($block)
+{
+    echo view('blocks/fnopi_home_timeline', ['block' => $block]);
+}
 
 function  fnopi_video_block_render_callback($block)
 {
