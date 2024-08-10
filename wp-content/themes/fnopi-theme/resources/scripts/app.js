@@ -1,3 +1,5 @@
+import StoriesManager from './StoriesManager.js';
+
 import domReady from '@roots/sage/client/dom-ready';
 import {
   Swiper,
@@ -16,6 +18,15 @@ Swiper.use([Autoplay,EffectFade,Pagination,Scrollbar,FreeMode,Navigation]);
  */
 domReady(async () => {
   // ...
+
+
+  if(document.querySelector('#fnopi-stories-archive')){
+    const storiesManager = new StoriesManager();
+    storiesManager.init();
+  }
+
+
+
 
   const hamburger = document.querySelector('#header-mobile-nav-btn');
   const hamburgerSticky = document.querySelector('#header-mobile-nav-btn-sticky');
@@ -75,7 +86,6 @@ domReady(async () => {
         let bannerTop = 0;
         // Get the top value of the banner and transform it to positive
         bannerTop = Math.abs(parseInt(window.getComputedStyle(banner).top, 10));
-        console.log(bannerTop)
         // Add or remove the class based on the scroll position and media query
         if (bannerTop && bannerTop < window.scrollY) {
             document.body.classList.add('has-scrolled');

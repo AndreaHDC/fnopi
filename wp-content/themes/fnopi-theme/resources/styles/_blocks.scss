@@ -114,16 +114,7 @@
     }
     
 
-    .image{
-        img{
-            @apply transition-transform duration-700;
-        }
-        &:hover{
-            img{
-                @apply scale-110;
-            }
-        }
-    }
+    
 
     .title-temi,
     .title{
@@ -233,5 +224,41 @@
         .swiper-scrollbar-drag{
             @apply bg-fnopi-dark-blue ;
         }
+    }
+}
+
+.infermieri-box{
+    .image{
+        img{
+            @apply transition-transform duration-700;
+        }
+        &:hover{
+            img{
+                @apply scale-110;
+            }
+        }
+    }
+}
+
+
+#fnopi-pagination{
+    @apply flex gap-3 items-center;
+    a.page-numbers:not(.next):not(.prev){
+        @apply text-sm flex justify-center items-center border border-solid border-fnopi-green aspect-square w-[36px] h-[36px] transition-colors hover:bg-fnopi-green;
+    }
+    a.prev,
+    a.next{
+        @apply transition-colors hover:text-fnopi-green;
+    }
+    span.current{
+        @apply text-sm bg-fnopi-green flex justify-center items-center border border-solid border-fnopi-green aspect-square w-[36px] h-[36px];
+
+    }
+}
+
+.fnopi-category-button{
+    @apply  hover:bg-fnopi-black hover:text-white rounded-full px-6 flex items-center justify-center p-3 border border-solid border-fnopi-black;
+    &.active{
+        @apply bg-fnopi-black text-white;
     }
 }

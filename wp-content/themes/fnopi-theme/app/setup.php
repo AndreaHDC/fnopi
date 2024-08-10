@@ -5,7 +5,7 @@
  */
 
 namespace App;
-
+use App\FnopiRest;
 use function Roots\bundle;
 
 /**
@@ -15,7 +15,20 @@ use function Roots\bundle;
  */
 add_action('wp_enqueue_scripts', function () {
     bundle('app')->enqueue();
+    $ajax_vars = [
+		'ajax_url' => admin_url( 'admin-ajax.php' )
+	];
+	bundle('app')->enqueue()->localize('localVars', $ajax_vars);
 }, 100);
+
+
+
+add_action('init', 'App\\fnopi_init_rest');
+function fnopi_init_rest()
+{
+    $fnopiRest = new FnopiRest();
+    $fnopiRest->init();
+}
 
 
 function enqueue_fslightbox_assets() {
