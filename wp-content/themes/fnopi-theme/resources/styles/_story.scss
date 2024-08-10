@@ -1,0 +1,17 @@
+.story-wrapper{
+
+}
+
+.story-title{
+    @apply pt-[50px] lg:pt-[100px] mx-auto max-w-screen-xl;
+    @apply  max-w-screen-xl #{!important};
+    h1{
+        @apply text-fnopi-blue border-solid border-b border-fnopi-black pb-1;
+        em{
+            @apply text-fnopi-green;
+        }
+    }
+    h2{
+        @apply italic text-4xl font-normal;
+    }
+}

@@ -6,6 +6,9 @@
 @import 'patterns';
 @import '../fonts/lato/stylesheet.css';
 @import '../fonts/bodoni/stylesheet.css';
+
+
+
 :where(.wp-block-group.has-background) {
     padding: 0;
 }
@@ -27,6 +30,8 @@
         @apply font-fnopi-heading text-xl lg:text-2xl font-normal tracking-tight;
     }
 
+    @apply font-light;
+
 
     .primo-piano-wrapper{
         
@@ -38,3 +43,6 @@
         }
     }
 }
+
+
+@import 'story';

@@ -1,6 +1,6 @@
 {
     "key": "group_66b75bf098e9f",
-    "title": "Fnopi Stories (copy)",
+    "title": "Fnopi Stories Archive",
     "fields": [
         {
             "key": "field_66b75bf09b313",
@@ -46,5 +46,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723292731
+    "modified": 1723312528
 }

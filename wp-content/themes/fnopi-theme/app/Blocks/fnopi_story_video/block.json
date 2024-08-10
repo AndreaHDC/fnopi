@@ -1,0 +1,14 @@
+{
+    "name": "fnopi/storyvideo",
+    "title": "Fnopi Story Video",
+    "description": "The Fnopi Story Video",
+    "style": [],
+    "category": "theme",
+    "icon": "slides",
+    "keywords": ["fnopi","story","video"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "fnopi_story_video_block_render_callback"
+    },
+    "align": "full"
+}

@@ -65,7 +65,13 @@ collect(['setup', 'filters'])
     });
 
     
-function  fnopi_stories_archive_block_render_callback($block)
+function fnopi_story_video_block_render_callback($block)
+{
+        echo view('blocks/fnopi_story_video', ['block' => $block]);
+}
+
+
+function fnopi_stories_archive_block_render_callback($block)
 {
     echo view('blocks/fnopi_stories_archive', ['block' => $block]);
 }

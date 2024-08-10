@@ -16,7 +16,7 @@ $categories = get_field('categories');
             <div class="lg:pl-[100px]">
                 <div class="title text-white flex flex-col md:flex-row justify-between">
                     <h2>{!!$title!!}</h2>
-                    <a href="http://">GUARDA TUTTI I VIDEO</a>
+                    <a href="/infermieri/">GUARDA TUTTI I VIDEO</a>
                 </div>
             </div>
 
@@ -72,7 +72,7 @@ $categories = get_field('categories');
                                 $color = ' bg-fnopi-dark-blue text-white';
                              }
                         @endphp
-                        <a href="{{$term->slug}}" class="{{$color}} aspect-video  transition-colors  hover:bg-fnopi-gray hover:text-white rounded-xl px-6 flex items-center justify-center">
+                        <a href="/infermieri/?term={{$term->slug}}" class="{{$color}} aspect-video  transition-colors  hover:bg-fnopi-gray hover:text-white rounded-xl px-6 flex items-center justify-center">
                             
                             <span class="font-fnopi-heading font-normal text-center text-2xl md:text-lg lg:text-2xl">{{$term->name}}</span>
                         </a>
