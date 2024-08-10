@@ -13,35 +13,54 @@ class StoriesManager {
 
   init() {
     const urlPath = window.location.pathname;
+    const urlParams = new URLSearchParams(window.location.search);
+  
+    // Get the page number from the URL
     const pageMatch = urlPath.match(/\/page\/(\d+)\//);
     if (pageMatch && pageMatch[1]) {
       this.state.page = parseInt(pageMatch[1], 10);
     } else {
       this.state.page = 1;
     }
+  
+    // Get the term from the URL, if it exists
+    const term = urlParams.get('term');
+    if (term) {
+      this.state.term = term;
+    } else {
+      this.state.term = 'all';
+    }
+  
     this.addClickEvents();
     this.getStories();
   }
 
+  
   addClickEvents = () => {
-
     this.categoryButtons.forEach(button => {
       button.addEventListener('click', () => {
-          this.state.page = 1;
-          if(button.classList.contains('active')){
-            button.classList.remove('active');
-            this.state.term = 'all';
-          }else{
-            this.categoryButtons.forEach(element => {
-              element.classList.remove('active');
-            });
-            button.classList.add('active');
-            this.state.term = button.getAttribute('data-term');
-          }
-          this.getStories(true);
+        this.state.page = 1;
+        let newUrl;
+  
+        if (button.classList.contains('active')) {
+          button.classList.remove('active');
+          this.state.term = 'all';
+          newUrl = `/infermieri/page/${this.state.page}/`;
+        } else {
+          this.categoryButtons.forEach(element => {
+            element.classList.remove('active');
+          });
+          button.classList.add('active');
+          this.state.term = button.getAttribute('data-term');
+          newUrl = `/infermieri/page/${this.state.page}/?term=${this.state.term}`;
+        }
+  
+        // Push the new URL to the history
+        window.history.pushState({ page: this.state.page }, '', newUrl);
+  
+        this.getStories(true);
       });
     });
-
   }
 
   getStories = async (scrollToTop = false) => {

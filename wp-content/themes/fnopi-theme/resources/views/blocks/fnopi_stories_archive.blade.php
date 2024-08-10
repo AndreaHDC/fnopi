@@ -7,6 +7,7 @@ if ( ! empty( $block['anchor'] ) ) {
 // $title = get_field('title');
 // $stories = get_field('stories');
 $categories = get_field('categories');
+$term_tax = isset($_GET['term']) ? $_GET['term']:false;
 @endphp
 
 <section {{$anchor}} class="my-[50px] lg:my-[100px]">
@@ -25,7 +26,7 @@ $categories = get_field('categories');
                                 $color = ' bg-fnopi-dark-blue text-white';
                              }
                         @endphp
-                        <button type="button" data-term="{{$term->slug}}" class="{{$color}} fnopi-category-button">
+                        <button type="button" data-term="{{$term->slug}}" class="{{$color}} {{$term_tax == $term->slug ? 'active':''}} fnopi-category-button">
                             <span class="text-center text-sm uppercase font-light">{{$term->name}}</span>
                         </button>
                     @endforeach
