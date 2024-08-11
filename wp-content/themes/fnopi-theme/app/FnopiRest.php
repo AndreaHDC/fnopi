@@ -106,14 +106,14 @@ class FnopiRest
                     // Replace the base URL with the desired structure for all pages
                     $link = preg_replace(
                         '/https:\/\/fnopi.vivastaging\.com\/wp-json\/api\/v1\/fnopi\/stories\/\d+\/page\//', 
-                        'https://wewentfast.com/venues/page/', 
+                        'https://fnopi.vivastaging.com/infermieri/page/', 
                         $link
                     );
 
                     // Special handling for page 1
                     $link = preg_replace(
                         '/https:\/\/fnopi.vivastaging\.com\/wp-json\/api\/v1\/fnopi\/stories\/\d+\//', 
-                        'https://wewentfast.com/venues/page/1/', 
+                        'https://fnopi.vivastaging.com/infermieri/page/1/', 
                         $link
                     );
                 }
