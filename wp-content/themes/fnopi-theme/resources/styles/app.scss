@@ -27,13 +27,15 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 @import 'blocks';
 @import 'patterns';
 @import 'story';
+@import 'milestone';
 
 body{
     @apply bg-fnopi-background font-fnopi-body text-fnopi-black font-light;
+    min-height: 100vh;
 }
 
 main{
-    @apply px-6 lg:px-[60px] 2xl:px-[120px];
+    @apply px-6 lg:px-[60px] 2xl:px-[120px] overflow-x-hidden;
 }
 
 :where(.wp-block-group.has-background) {

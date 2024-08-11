@@ -10,8 +10,8 @@ $categories = get_field('categories');
 $term_tax = isset($_GET['term']) ? $_GET['term']:false;
 @endphp
 
-<section {{$anchor}} class="my-[50px] lg:my-[100px]">
-    <div class="mb-12">
+<section {{$anchor}} class="my-[50px] lg:my-[100px] animate-opacity">
+    <div class="mb-12 ">
         <p class="text-center">Esplora per:</p>
         @if (count($categories))
                 <div class="grid lg:grid-cols-3 gap-3 md:gap-6 mt-3" id="categories-container">
@@ -35,15 +35,10 @@ $term_tax = isset($_GET['term']) ? $_GET['term']:false;
     </div>
     <div  class="alignfull py-12 lg:py-[100px] bg-fnopi-black">
         <div class="alignwide mx-auto px-6 lg:px-[60px] 2xl:px-[120px]">
-
             <div id="fnopi-loader-container" class="flex justify-center">
                 <span class="fnopi-loader"></span>
             </div>
-
             <div id="fnopi-stories-archive" class="grid md:grid-cols-3 lg:grid-cols-4 gap-10"></div>
-
-
-
             <div class="justify-center text-white mt-16 hidden">
                 <div id="fnopi-pagination"></div>
             </div>

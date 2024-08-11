@@ -13,7 +13,7 @@ $box_5 = get_field('box_5');
 $colors = ['bg-fnopi-green','bg-fnopi-dark-green','bg-fnopi-dark-blue'];
 
 @endphp
-<section {{$anchor}} class="alignfull fnopi-grid">
+<section {{$anchor}} class="alignfull fnopi-grid animate-top">
 
     @if (is_admin())
        <h2 class="py-12">Home Grid</h2>

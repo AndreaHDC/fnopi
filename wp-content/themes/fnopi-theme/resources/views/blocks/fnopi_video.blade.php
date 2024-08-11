@@ -7,7 +7,7 @@ if ( ! empty( $block['anchor'] ) ) {
 $poster = get_field('poster');
 $video = get_field('video');
 @endphp
-<div {{$anchor}} class="fnopi-video">
+<div {{$anchor}} class="fnopi-video animate-top">
     <a style="margin-top:0" data-fslightbox="virtual-{{$video}}" href="#virtual-{{$video}}">
         <div class="aspect-video relative overflow-hidden">
             {!! wp_get_attachment_image($poster, 'full', false, ['class' => 'w-full h-full object-cover']) !!}

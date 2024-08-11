@@ -28,17 +28,13 @@ if (!$stories) {
 @endphp
 <section {{$anchor}} class="alignfull py-12 lg:py-[100px] bg-fnopi-black">
     <div id="fnopi-stories">
-
-    
         <div class="alignwide mx-auto px-6 lg:px-[60px] 2xl:px-[120px]">
             <div class="lg:pl-[100px]">
                 <div class="title text-white flex flex-col md:flex-row justify-between">
-                    <h2>{!!$title!!}</h2>
+                    <h2 class="animate-left">{!!$title!!}</h2>
                     <a href="/infermieri/">GUARDA TUTTI I VIDEO</a>
                 </div>
             </div>
-
-
             @if (count($stories))
                 @if (is_admin())
                 <div class="grid grid-cols-4 gap-12 mt-12">
@@ -67,16 +63,14 @@ if (!$stories) {
                     <div class="swiper-pagination"></div>
                 </div>
                 @endif
-               
             @endif
-
             @if ($categories && count($categories))
                 <div class="lg:pl-[100px] mt-12">
                     <div class="title-temi text-white flex flex-col md:flex-row justify-end">
                         <a href="http://">ESPLORA PER TEMI</a>
                     </div>
                 </div>
-                <div class="grid md:grid-cols-3 gap-10 md:gap-6 mt-12">
+                <div class="grid md:grid-cols-3 gap-10 md:gap-6 mt-12 animate-top">
                     @foreach ($categories as $item)
                         @php
                              $term = get_term_by('id', $item, 'stories-tax');
@@ -95,12 +89,6 @@ if (!$stories) {
                     @endforeach
                 </div>
             @endif
-
-
-
         </div>
-
-        
-
     </div>
 </section>

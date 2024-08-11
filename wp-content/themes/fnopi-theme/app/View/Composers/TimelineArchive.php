@@ -56,6 +56,7 @@ class TimelineArchive extends Composer
                 $milestone = [
                     'id' => get_the_id(),
                     'title' => get_the_title(),
+                    'link' => get_the_permalink(),
                     'year' => $year,
                     'date' => $date,
                     'image' => get_field('image',get_the_id()),

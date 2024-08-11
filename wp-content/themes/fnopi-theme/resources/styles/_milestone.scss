@@ -1,0 +1,38 @@
+.milestone-title{
+    @apply pt-[50px] lg:pt-[100px] mx-auto max-w-screen-xl;
+    @apply  max-w-screen-xl #{!important};
+    h1{
+        @apply text-fnopi-blue border-solid border-b border-fnopi-black pb-1;
+        strong{
+            @apply font-normal text-fnopi-green;
+        }
+        // em{
+        //     @apply text-fnopi-green;
+        // }
+    }
+    h2{
+        @apply italic text-4xl font-normal;
+    }
+}
+
+.milestone-content-wrapper{
+    @apply mx-auto max-w-screen-xl my-[50px] lg:my-[100px]  #{!important};
+
+    .wp-element-caption{
+        @apply text-left font-bold;
+    }
+
+    img{
+        @apply w-full h-auto;
+    }
+
+    .left-columns{
+        @apply gap-20;
+        h3{
+            @apply text-fnopi-dark-green;
+        }
+    }
+    
+
+
+}

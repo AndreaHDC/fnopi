@@ -1,4 +1,5 @@
 import StoriesManager from './StoriesManager.js';
+import AnimationManager from './AnimationManager.js';
 
 import domReady from '@roots/sage/client/dom-ready';
 import {
@@ -18,6 +19,11 @@ Swiper.use([Autoplay,EffectFade,Pagination,Scrollbar,FreeMode,Navigation]);
  */
 domReady(async () => {
   // ...
+
+
+  // const animations = new AnimationManager();
+  // animations.init();
+
 
 
   if(document.querySelector('#fnopi-stories-archive')){

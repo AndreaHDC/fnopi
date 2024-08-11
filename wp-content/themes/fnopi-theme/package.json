@@ -26,6 +26,9 @@
   },
   "dependencies": {
     "hamburgers": "^1.2.1",
-    "swiper": "^9.4.1"
+    "swiper": "^9.4.1",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.6",
+		"scrolltrigger": "^1.0.1"
   }
 }

@@ -9,22 +9,25 @@ sort($years);
 // $poster = get_field('poster');
 @endphp
 <section {{$anchor}} class="">
-    <div id="fnopi-timeline-archive">
+    <div id="fnopi-timeline-archive" class="animate-opacity">
         <div class="swiper">
             <div class="scollbar-wrapper flex gap-3 items-center">
                 <span>{{reset($years)}}</span>
                 <div class="swiper-scrollbar w-full overflow-hidden"></div>
                 <span>{{end($years)}}</span>
             </div>
-           
             <div class="swiper-wrapper">
                 @foreach ($milestones as $year => $items)
-                <div class="swiper-slide">
+                <div class="swiper-slide">        
                     <span>{{$year}}</span>
                     <div class="content">
                         @foreach ($items as $step)
                             <div class="pl-4 pr-10 mb-12">
-                                {!! wp_get_attachment_image($step['image'], 'square', false, ['class' => 'w-full h-auto']) !!}
+                                <a href="{{$step['link']}}">
+                                    <div class="overflow-hidden">
+                                        {!! wp_get_attachment_image($step['image'], 'square', false, ['class' => 'w-full h-auto  transition-transform duration-500 hover:scale-110']) !!}
+                                    </div>
+                                </a>
                                 <h4 class="uppercase font-bold text-sm mt-3">{!!$step['title']!!}</h4>
                                 <p class="text-sm mt-3">{!!$step['content']!!}</p>
                             </div>
