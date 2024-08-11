@@ -30,6 +30,16 @@ function fnopi_init_rest()
     $fnopiRest->init();
 }
 
+/**
+ * Register the theme assets with the block editor.
+ *
+ * @return void
+ */
+add_action('enqueue_block_editor_assets', function () {
+    bundle('editorscripts')->enqueue();
+}, 100);
+
+
 
 function enqueue_fslightbox_assets() {
     // Enqueue FsLightbox CSS

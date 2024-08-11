@@ -1,0 +1,14 @@
+{
+    "name": "fnopi/related",
+    "title": "Fnopi Related",
+    "description": "The Fnopi Related",
+    "style": [],
+    "category": "theme",
+    "icon": "slides",
+    "keywords": ["fnopi","grid","related"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "fnopi_related_block_render_callback"
+    },
+    "align": "full"
+}

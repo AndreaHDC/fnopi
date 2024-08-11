@@ -1,0 +1,14 @@
+{
+    "name": "fnopi/terms",
+    "title": "Fnopi Terms",
+    "description": "The Fnopi Terms",
+    "style": [],
+    "category": "theme",
+    "icon": "slides",
+    "keywords": ["fnopi","grid","terms"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "fnopi_terms_block_render_callback"
+    },
+    "align": "full"
+}

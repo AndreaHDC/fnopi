@@ -64,10 +64,20 @@ collect(['setup', 'filters'])
         }
     });
 
+
     
+function fnopi_related_block_render_callback($block)
+{ 
+    echo view('blocks/fnopi_related', ['block' => $block]);
+}   
+function fnopi_terms_block_render_callback($block)
+{ 
+    echo view('blocks/fnopi_terms', ['block' => $block]);
+}   
+
 function fnopi_story_video_block_render_callback($block)
 {
-        echo view('blocks/fnopi_story_video', ['block' => $block]);
+    echo view('blocks/fnopi_story_video', ['block' => $block]);
 }
 
 

@@ -16,6 +16,7 @@ export default async (app) => {
   app
     .entry('app', ['@scripts/app', '@styles/app'])
     .entry('editor', ['@scripts/editor', '@styles/editor'])
+    .entry('editorscripts', ['@scripts/editor'])
     .assets(['images']);
 
   /**
@@ -79,6 +80,20 @@ export default async (app) => {
         customFontSize: false,
       },
     })
+
+    .set('styles.elements.button.typography.fontWeight', '700')
+    .set('styles.elements.button.spacing.padding.top', '0')
+    .set('styles.elements.button.spacing.padding.bottom', '0')
+    .set('styles.elements.button.spacing.padding.left', '0')
+    .set('styles.elements.button.spacing.padding.right', '0')
+    .set('styles.elements.button.border.radius.topLeft', '0')
+    .set('styles.elements.button.border.radius.topRight', '0')
+    .set('styles.elements.button.border.radius.bottomLeft', '0')
+    .set('styles.elements.button.border.radius.bottomRight', '0')
+    .set('styles.elements.button.color.background', 'transparent')
+    .set('styles.elements.button.color.text', 'var(--wp--preset--color--fnopi-green)')
+    
+
     .useTailwindColors()
     .useTailwindFontFamily()
     .useTailwindFontSize();

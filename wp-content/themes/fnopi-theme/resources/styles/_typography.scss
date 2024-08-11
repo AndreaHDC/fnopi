@@ -13,6 +13,21 @@ h3,.h3{
     @apply font-fnopi-heading text-xl lg:text-2xl font-normal tracking-tight;
 }
 
+.wp-element-button{
+  @apply hover:underline text-lg;
+}
+
+.is-style-download{
+  @apply relative pl-14 flex items-center h-[46px] #{!important};
+  &::before{
+    @apply absolute left-0 top-0 w-[37px] h-[46px];
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='37.882' height='46' viewBox='0 0 37.882 46'%3E%3Cpath id='Icon_material-file-download' data-name='Icon material-file-download' d='M45.382,20.735H34.559V4.5H18.324V20.735H7.5L26.441,39.676ZM7.5,45.088V50.5H45.382V45.088Z' transform='translate(-7.5 -4.5)' fill='%23a5be3a'/%3E%3C/svg%3E%0A");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+}
 
 .fnopi-loader {
     width: 48px;

@@ -30,6 +30,10 @@
         @apply font-fnopi-heading text-xl lg:text-2xl font-normal tracking-tight;
     }
 
+    .wp-element-button{
+        @apply hover:underline text-lg;
+    }
+
     @apply font-light;
 
 

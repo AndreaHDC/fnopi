@@ -1,8 +1,9 @@
 {
-  "app.css": "css/app.e27674.css",
+  "app.css": "css/app.66fa5c.css",
   "app.js": "js/app.d05cc8.js",
-  "editor.css": "css/editor.bd2baf.css",
-  "editor.js": "js/editor.c86a86.js",
+  "editor.css": "css/editor.907876.css",
+  "editor.js": "js/editor.65a860.js",
+  "editorscripts.js": "js/editorscripts.6334f9.js",
   "runtime.js": "js/runtime.c039ed.js",
   "fonts/lato/Lato-Regular.woff2": "fonts/lato/Lato-Regular.06ef03.woff2",
   "fonts/bodoni/BodoniModa_18pt-Italic.woff2": "fonts/bodoni/BodoniModa_18pt-Italic.745cf6.woff2",

@@ -64,6 +64,7 @@
 .wp-block-quote{
     border: none;
     padding: 0;
+    margin-bottom: 0;
     p{
         @apply pb-[100px] pt-[200px] font-fnopi-heading text-2xl italic relative px-12;
         &::before{

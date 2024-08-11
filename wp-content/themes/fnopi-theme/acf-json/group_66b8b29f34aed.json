@@ -1,13 +1,13 @@
 {
-    "key": "group_66ae467cdcced",
-    "title": "Fnopi Stories",
+    "key": "group_66b8b29f34aed",
+    "title": "Fnopi Related",
     "fields": [
         {
-            "key": "field_66ae46e33b609",
+            "key": "field_66b8b647c0a2e",
             "label": "Title",
             "name": "title",
             "aria-label": "",
-            "type": "textarea",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -18,14 +18,14 @@
             },
             "default_value": "",
             "maxlength": "",
-            "rows": "",
             "placeholder": "",
-            "new_lines": ""
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_66ae467dff7de",
-            "label": "Stories",
-            "name": "stories",
+            "key": "field_66b8b29f73c70",
+            "label": "Related",
+            "name": "related",
             "aria-label": "",
             "type": "relationship",
             "instructions": "",
@@ -37,7 +37,7 @@
                 "id": ""
             },
             "post_type": [
-                "story"
+                "milestone"
             ],
             "post_status": [
                 "publish"
@@ -48,34 +48,9 @@
             ],
             "return_format": "id",
             "min": "",
-            "max": 4,
+            "max": "",
             "elements": "",
             "bidirectional": 0,
-            "bidirectional_target": []
-        },
-        {
-            "key": "field_66ae46abff7df",
-            "label": "Categories",
-            "name": "categories",
-            "aria-label": "",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "stories-tax",
-            "add_term": 0,
-            "save_terms": 0,
-            "load_terms": 0,
-            "return_format": "id",
-            "field_type": "multi_select",
-            "allow_null": 0,
-            "bidirectional": 0,
-            "multiple": 0,
             "bidirectional_target": []
         }
     ],
@@ -84,7 +59,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "fnopi\/stories"
+                "value": "fnopi\/related"
             }
         ]
     ],
@@ -97,5 +72,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723315583
+    "modified": 1723381329
 }

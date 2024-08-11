@@ -15,3 +15,35 @@
         @apply italic text-4xl font-normal;
     }
 }
+
+.story-content{
+    @apply mx-auto max-w-screen-xl my-[50px] lg:my-[100px]  #{!important};
+
+    @apply border-b border-solid border-fnopi-black;
+
+    h6{
+        @apply font-fnopi-heading text-2xl tracking-tight pb-2 border-solid border-b border-b-fnopi-black relative pl-9;
+        &::before{
+            @apply absolute left-0 top-2 w-[21px] h-[21px] m-auto;
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.243' height='24' viewBox='0 0 25.243 24'%3E%3Cg id='Icon_feather-arrow-down' data-name='Icon feather-arrow-down' transform='translate(-5.379 -6)'%3E%3Cpath id='Path_4' data-name='Path 4' d='M18,7.5v21' fill='none' stroke='%23a5be3a' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3Cpath id='Path_5' data-name='Path 5' d='M28.5,18,18,28.5,7.5,18' fill='none' stroke='%23a5be3a' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E%0A");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .wp-block-columns.maincol{
+        @apply mt-[50px] lg:gap-20;
+
+        h3{
+            @apply text-fnopi-green my-[50px];
+        }
+
+        .wp-block-columns{
+            @apply mt-[50px] flex-col lg:flex-row ;
+            h3{
+                @apply my-0;
+            }
+        }
+    }
+}

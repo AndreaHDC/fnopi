@@ -7,6 +7,24 @@ if ( ! empty( $block['anchor'] ) ) {
 $title = get_field('title');
 $stories = get_field('stories');
 $categories = get_field('categories');
+
+if (!$stories) {
+    $args = array(
+        'post_type' => 'story',  // Replace 'story' with your custom post type slug
+        'posts_per_page' => 4,
+        'orderby' => 'rand',
+        'post__not_in' => array(get_the_ID()) // Exclude the current post ID
+    );
+    $random_stories = new WP_Query($args);
+    if ($random_stories->have_posts()) {
+        $stories = array();
+        while ($random_stories->have_posts()) {
+            $random_stories->the_post();
+            $stories[] = get_the_ID();
+        }
+        wp_reset_postdata(); // Reset post data after custom query
+    }
+}
 @endphp
 <section {{$anchor}} class="alignfull py-12 lg:py-[100px] bg-fnopi-black">
     <div id="fnopi-stories">
@@ -52,14 +70,12 @@ $categories = get_field('categories');
                
             @endif
 
-
-            <div class="lg:pl-[100px] mt-12">
-                <div class="title-temi text-white flex flex-col md:flex-row justify-end">
-                    <a href="http://">ESPLORA PER TEMI</a>
+            @if ($categories && count($categories))
+                <div class="lg:pl-[100px] mt-12">
+                    <div class="title-temi text-white flex flex-col md:flex-row justify-end">
+                        <a href="http://">ESPLORA PER TEMI</a>
+                    </div>
                 </div>
-            </div>
-
-            @if (count($categories))
                 <div class="grid md:grid-cols-3 gap-10 md:gap-6 mt-12">
                     @foreach ($categories as $item)
                         @php
