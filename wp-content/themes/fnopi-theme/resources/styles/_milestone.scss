@@ -13,6 +13,10 @@
     h2{
         @apply italic text-4xl font-normal;
     }
+
+    #fnopi-terms{
+        @apply mt-[50px] flex justify-center;
+    }
 }
 
 .milestone-content-wrapper{

@@ -250,7 +250,7 @@ function fnopi_block_patterns() {
             <!-- /wp:column -->
 
             <!-- wp:column {"width":"33.33%"} -->
-            <div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:fnopi/terms {"name":"fnopi/terms","mode":"preview"} /--></div>
+            <div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:fnopi/terms {"name":"fnopi/terms","data":{"field_66b8d14d91de1":"story-tag"},"mode":"preview"} /--></div>
             <!-- /wp:column --></div>
             <!-- /wp:columns --></div>
             <!-- /wp:group -->
@@ -265,8 +265,7 @@ function fnopi_block_patterns() {
             <p class="has-text-align-center">Ciò che mi piacerebbe dire a chi intraprende la carriera infermieristica,<br>oggi, è che fa uno dei lavori più belli del mondo perché è più in linea con i bisogni della gente di oggi<br><strong>Edoardo Manzoni</strong></p>
             <!-- /wp:paragraph --></blockquote>
             <!-- /wp:quote --></div>
-            <!-- /wp:group -->
-            ',
+            <!-- /wp:group -->',
 		)
 	);
 
@@ -284,7 +283,9 @@ function fnopi_block_patterns() {
 
             <!-- wp:heading {"textAlign":"center"} -->
             <h2 class="wp-block-heading has-text-align-center">Inizio della pandemia</h2>
-            <!-- /wp:heading --></div>
+            <!-- /wp:heading -->
+
+            <!-- wp:fnopi/terms {"name":"fnopi/terms","data":{"taxonomy":"milestone-tags","_taxonomy":"field_66b8d14d91de1"},"mode":"preview"} /--></div>
             <!-- /wp:group -->
 
             <!-- wp:group {"className":"milestone-content-wrapper","layout":{"type":"constrained"}} -->
@@ -361,8 +362,7 @@ function fnopi_block_patterns() {
             <p class="has-text-align-center">Ciò che mi piacerebbe dire a chi intraprende la carriera infermieristica,<br>oggi, è che fa uno dei lavori più belli del mondo perché è più in linea con i bisogni della gente di oggi<br><strong>Edoardo Manzoni</strong></p>
             <!-- /wp:paragraph --></blockquote>
             <!-- /wp:quote --></div>
-            <!-- /wp:group -->
-            ',
+            <!-- /wp:group -->',
 		)
 	);
 }
@@ -388,3 +388,18 @@ function fnopi_register_milestone_block_template() {
     );
 }
 add_action( 'init', 'App\\fnopi_register_milestone_block_template' );
+
+
+
+
+
+function custom_tag_list_shortcode() {
+    $tags = get_tags();
+    $output = '<ul class="custom-tag-list">';
+    foreach ($tags as $tag) {
+        $output .= '<li>' . esc_html($tag->name) . '</li>';
+    }
+    $output .= '</ul>';
+    return $output;
+}
+add_shortcode('tag_list', 'App\\custom_tag_list_shortcode');
