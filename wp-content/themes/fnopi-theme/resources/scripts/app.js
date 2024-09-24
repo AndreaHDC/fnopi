@@ -279,6 +279,54 @@ domReady(async () => {
 
 
 
+  // Add click event for every button that has data-fslightbox
+  const fslightboxButtons = document.querySelectorAll('.fslightbox-trigger');
+  if(fslightboxButtons.length){
+    fslightboxButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        const videoCut = button.getAttribute('data-videocut');
+        const start = button.getAttribute('data-start');
+        const end = button.getAttribute('data-end');
+        // const videoId = button.getAttribute('data-fslightbox');
+        
+        if (typeof Vimeo !== 'undefined') {
+         setTimeout(() => {
+          const iframe = document.querySelector(`.fslightbox-container .story-cut-video`);
+          const player = new Vimeo.Player(iframe);
+          var startTime = start; // Start at 30 seconds
+          var endTime = end;   // End at 60 seconds
+          player.on('loaded', function() {
+            player.setCurrentTime(startTime);
+            player.play();
+          });
+      
+          // Monitor playback time to stop at the end time
+          player.on('timeupdate', function(data) {
+              // Check if the current time is greater than the end time
+              if (data.seconds >= endTime) {
+                  player.pause();  // Pause the video
+                  player.setCurrentTime(endTime); // Prevent scrubbing beyond the end time
+              }
+              // Prevent scrubbing before the start time
+              if (data.seconds < startTime) {
+                  player.setCurrentTime(startTime); // Reset to start time if scrubbed too far back
+              }
+          });
+        }, 200);
+
+          
+         
+        } else {
+          console.error('Vimeo API is not available.');
+        }
+        // console.log(start,end,videoId);
+      });
+    });
+  }
+
+
+
+
 });
 
 /**

@@ -95,6 +95,73 @@
     h3{
         @apply max-w-[900px] mx-auto;
     }
+
+    &.page-news{
+        h1{
+            em{
+                @apply text-fnopi-black;
+            }
+        }
+       
+    }
    
    
+}
+
+
+.three-column-grid{
+    @apply grid grid-cols-1 md:grid-cols-3 gap-12;
+
+    
+   
+}
+
+.news-loop{
+    @apply mb-12 gap-6 xl:gap-12  2xl:gap-36;
+
+    grid-template-columns: 1fr  #{!important};
+
+    @screen sm {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) #{!important};
+    }
+
+    @screen xl {
+        grid-template-columns: repeat(3, minmax(0, 1fr))  #{!important};
+    }
+
+    figure{
+        @apply overflow-hidden;
+        img{
+            @apply transition-transform duration-500;
+        }
+        &:hover{
+            img{
+                @apply scale-105;
+            }   
+        }
+    }
+   
+    time{
+        @apply uppercase border-b border-solid border-black pb-2 mb-4 block text-lg tracking-wider;
+    }
+    .wp-block-post-title{
+        @apply mb-3 px-12;
+    }
+    .wp-block-post-featured-image{
+        @apply mb-6;
+    }
+
+   
+}
+
+.wp-block-query-pagination{
+    @apply mb-12 xl:mb-24;
+}
+.wp-block-query-pagination-numbers{
+    .page-numbers {
+        @apply  border border-solid border-black px-3 py-2 rounded-full text-xs font-bold transition-colors hover:bg-fnopi-black hover:text-white;
+        &.current{
+            @apply bg-fnopi-black text-white;
+        }
+    }
 }
