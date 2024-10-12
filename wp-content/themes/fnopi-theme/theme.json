@@ -60,6 +60,11 @@
           "slug": "fnopi-green"
         },
         {
+          "color": "#aeca63",
+          "name": "Fnopi-light-green",
+          "slug": "fnopi-light-green"
+        },
+        {
           "color": "#202a2c",
           "name": "Fnopi-black",
           "slug": "fnopi-black"

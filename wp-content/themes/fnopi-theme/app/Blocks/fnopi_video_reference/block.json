@@ -1,0 +1,14 @@
+{
+    "name": "fnopi/video-reference",
+    "title": "Fnopi Video Reference",
+    "description": "The Fnopi Video Reference",
+    "style": [],
+    "category": "theme",
+    "icon": "slides",
+    "keywords": ["fnopi","video reference"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "fnopi_video_reference_block_render_callback"
+    },
+    "align": "full"
+}

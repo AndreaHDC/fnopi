@@ -111,3 +111,12 @@ function  fnopi_stories_block_render_callback($block)
     echo view('blocks/fnopi_stories', ['block' => $block]);
 }
 
+function  fnopi_video_reference_block_render_callback($block)
+{
+    echo view('blocks/fnopi_video_reference', ['block' => $block]);
+}
+
+function  fnopi_related_news_block_render_callback($block)
+{
+    echo view('blocks/fnopi_related_news', ['block' => $block]);
+}

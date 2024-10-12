@@ -200,6 +200,18 @@ add_action( 'init', 'App\\fnopi_register_milestone_block_template' );
 
 
 
+function fnopi_register_news_block_template() {
+    $post_type_object = get_post_type_object( 'post' );
+    $post_type_object->template = array( 
+        array( 'core/pattern', array(
+            'slug' => 'fnopi/news-layout',
+        ) )
+    );
+}
+add_action( 'init', 'App\\fnopi_register_news_block_template' );
+
+
+
 
 
 function custom_tag_list_shortcode() {

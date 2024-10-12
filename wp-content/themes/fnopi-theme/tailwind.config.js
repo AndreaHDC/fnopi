@@ -10,6 +10,7 @@ const config = {
         'fnopi-dark-green':'#8AB185',
         'fnopi-gray':'#707070',
         'fnopi-green':'#A5BE3A',
+        'fnopi-light-green':'#aeca63',
         'fnopi-black':'#202A2C',
       }, // Extend Tailwind's default colors
       fontFamily: {

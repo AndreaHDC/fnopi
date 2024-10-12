@@ -325,6 +325,35 @@ domReady(async () => {
   }
 
 
+  // video reference
+  const videoReferenceButtons = document.querySelectorAll('.fnopi-video-reference-button');
+  if(videoReferenceButtons.length){
+    videoReferenceButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();   
+        const content = document.querySelector('#fnopi-video-reference-content');
+        button.classList.toggle('active');
+        if (content.style.height === '0px' || content.style.height === '') {
+          content.style.height = '0px';
+          setTimeout(() => {
+            content.style.transition = 'height 0.3s ease-in-out';
+            content.style.height = `${content.scrollHeight}px`;
+          }, 10);
+          content.ariaHidden = 'false';
+        } else {
+          content.style.transition = 'height 0.3s ease-in-out';
+          content.style.height = '0px';
+          content.addEventListener('transitionend', function transitionEndHandler() {
+            content.style.transition = '';
+            content.removeEventListener('transitionend', transitionEndHandler);
+          });
+          content.ariaHidden = 'true';
+        }
+      });
+    });
+  }
+
+
 
 
 });

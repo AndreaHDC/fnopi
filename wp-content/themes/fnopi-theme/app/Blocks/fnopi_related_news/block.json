@@ -1,0 +1,14 @@
+{
+    "name": "fnopi/related-news",
+    "title": "Fnopi Related News",
+    "description": "The Fnopi Related News",
+    "style": [],
+    "category": "theme",
+    "icon": "slides",
+    "keywords": ["fnopi","related-news"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "fnopi_related_news_block_render_callback"
+    },
+    "align": "full"
+}

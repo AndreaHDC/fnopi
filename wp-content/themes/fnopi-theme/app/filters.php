@@ -40,13 +40,12 @@ add_image_size('news-thumb', 400, 700, true);
 add_action('init', 'App\\register_acf_blocks');
 function register_acf_blocks()
 {
-    $custom_blocks = ['fnopi_related','fnopi_terms','fnopi_story_video','fnopi_stories_archive','fnopi_timeline_archive','fnopi_timeline_home','fnopi_video','fnopi_grid','fnopi_stories'];
+    $custom_blocks = ['fnopi_related_news','fnopi_video_reference','fnopi_related','fnopi_terms','fnopi_story_video','fnopi_stories_archive','fnopi_timeline_archive','fnopi_timeline_home','fnopi_video','fnopi_grid','fnopi_stories'];
     foreach ($custom_blocks as $custom_block) {
         register_block_type(__DIR__ . '/Blocks/'.$custom_block);
         $function = $custom_block.'_block_render_callback';
     }
 }
-
 
 
 // Register custom block patterns
@@ -86,9 +85,9 @@ function fnopi_block_patterns() {
             <!-- /wp:group -->
 
             <!-- wp:group {"className":"story-content","layout":{"type":"constrained"}} -->
-            <div class="wp-block-group story-content"><!-- wp:heading {"level":6} -->
-            <h6 class="wp-block-heading">Video reference</h6>
-            <!-- /wp:heading -->
+            <div class="wp-block-group story-content">
+            
+            <!-- wp:fnopi/video-reference {"name":"fnopi/video-reference","data":{"button_title":"Video reference","_button_title":"field_670a6507d3b96","reference":"Lorem Ipsum\r\n\u003cstrong\u003eLorem Ipusm\u003c/strong\u003e","_reference":"field_670a6517d3b97"},"mode":"edit"} /-->
 
             <!-- wp:columns {"className":"maincol"} -->
             <div class="wp-block-columns maincol"><!-- wp:column {"width":"66.66%"} -->
@@ -239,6 +238,55 @@ function fnopi_block_patterns() {
             <!-- /wp:paragraph --></blockquote>
             <!-- /wp:quote --></div>
             <!-- /wp:group -->',
+		)
+	);
+
+
+    register_block_pattern(
+		'fnopi/news-layout',
+		array(
+			'title'       => __( 'News Layout', 'fnopi' ),
+			'description' => _x( 'The Layout for the News', 'fnopi' ),
+			'categories'  => array( 'fnopi-patterns' ),
+			'content'     => '<!-- wp:group {"metadata":{"name":"News Hero"},"className":"news-hero","style":{"spacing":{"margin":{"top":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
+            <div class="wp-block-group news-hero" style="margin-top:var(--wp--preset--spacing--70)"><!-- wp:columns -->
+            <div class="wp-block-columns"><!-- wp:column -->
+            <div class="wp-block-column"><!-- wp:post-featured-image {"aspectRatio":"1"} /--></div>
+            <!-- /wp:column -->
+
+            <!-- wp:column {"className":"right"} -->
+            <div class="wp-block-column right"><!-- wp:group {"layout":{"type":"default"}} -->
+            <div class="wp-block-group"><!-- wp:post-date /-->
+
+            <!-- wp:post-title {"level":1,"className":"h2","style":{"elements":{"link":{"color":{"text":"var:preset|color|fnopi-green"}}}},"textColor":"fnopi-green"} /--></div>
+            <!-- /wp:group --></div>
+            <!-- /wp:column --></div>
+            <!-- /wp:columns --></div>
+            <!-- /wp:group -->
+
+            <!-- wp:group {"metadata":{"name":"News Content"},"className":"news-content","style":{"spacing":{"margin":{"top":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
+            <div class="wp-block-group news-content" style="margin-top:var(--wp--preset--spacing--70)"><!-- wp:columns -->
+            <div class="wp-block-columns"><!-- wp:column {"className":"left"} -->
+            <div class="wp-block-column left"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|fnopi-green"}}}},"textColor":"fnopi-green"} -->
+            <h3 class="wp-block-heading has-fnopi-green-color has-text-color has-link-color">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h3>
+            <!-- /wp:heading --></div>
+            <!-- /wp:column -->
+
+            <!-- wp:column {"className":"right"} -->
+            <div class="wp-block-column right"><!-- wp:paragraph -->
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <!-- /wp:paragraph --></div>
+            <!-- /wp:column --></div>
+            <!-- /wp:columns --></div>
+            <!-- /wp:group -->
+
+            <!-- wp:group {"metadata":{"name":"Title"},"className":"related-title","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group related-title"><!-- wp:heading {"textAlign":"left"} -->
+            <h2 class="wp-block-heading has-text-align-left">Ultime Notizie</h2>
+            <!-- /wp:heading --></div>
+            <!-- /wp:group -->
+
+            <!-- wp:fnopi/related-news {"name":"fnopi/related-news","mode":"preview"} /-->',
 		)
 	);
 

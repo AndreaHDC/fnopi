@@ -14,7 +14,7 @@ $term_tax = isset($_GET['term']) ? $_GET['term']:false;
     <div class="mb-12 ">
         <p class="text-center">Esplora per:</p>
         @if (count($categories))
-                <div class="grid lg:grid-cols-3 gap-3 md:gap-6 mt-3" id="categories-container">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mt-3" id="categories-container">
                     @foreach ($categories as $item)
                         @php
                              $term = get_term_by('id', $item, 'stories-tax');
@@ -24,6 +24,9 @@ $term_tax = isset($_GET['term']) ? $_GET['term']:false;
                              }
                              if ($loop->index == 2) {
                                 $color = ' bg-fnopi-dark-blue text-white';
+                             }
+                             if ($loop->index == 3) {
+                                $color = ' bg-fnopi-light-green';
                              }
                         @endphp
                         <button type="button" data-term="{{$term->slug}}" class="{{$color}} {{$term_tax == $term->slug ? 'active':''}} fnopi-category-button">

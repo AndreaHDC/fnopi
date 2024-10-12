@@ -1,7 +1,7 @@
 {
-  "app.css": "css/app.3ec3d4.css",
-  "app.js": "js/app.ba4995.js",
-  "editor.css": "css/editor.8def27.css",
+  "app.css": "css/app.e87a71.css",
+  "app.js": "js/app.5bd6ac.js",
+  "editor.css": "css/editor.35c5c3.css",
   "editor.js": "js/editor.65a860.js",
   "editorscripts.js": "js/editorscripts.6334f9.js",
   "runtime.js": "js/runtime.c039ed.js",
@@ -13,7 +13,7 @@
   "images/main-logo.svg": "images/main-logo.64f53c.svg",
   "images/main-logo-min.svg": "images/main-logo-min.2d2578.svg",
   "images/fnopi-logo.png": "images/fnopi-logo.2f4e7d.png",
-  "images/icon.png": "images/icon.df8f99.png",
   "../theme.json": "../theme.json",
+  "images/icon.png": "images/icon.df8f99.png",
   "entrypoints.json": "entrypoints.json"
 }

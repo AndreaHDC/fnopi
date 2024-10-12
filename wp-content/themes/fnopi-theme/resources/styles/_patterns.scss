@@ -165,3 +165,76 @@
         }
     }
 }
+
+.form-wrapper{
+    @apply p-6 md:p-12 border border-solid border-fnopi-black rounded-3xl mx-auto max-w-5xl #{!important};
+
+    input[type="text"],
+    input[type="email"],
+    textarea{
+        @apply border border-solid border-[#CCCCCC] rounded-lg p-3 #{!important};
+    }
+
+    .gform_button{
+        @apply bg-fnopi-blue uppercase text-fnopi-black font-bold px-6 py-3 rounded-full hover:bg-fnopi-dark-blue hover:text-white transition-colors #{!important};;
+    }
+}
+
+.raccontaci-hero{
+    @apply mt-6;
+    .wp-block-cover{
+        @apply min-h-[40vh] md:min-h-[70vh];
+    }
+}
+
+
+.news-hero{
+    @apply mx-auto max-w-6xl #{!important};
+
+    .wp-block-columns{
+        .right{
+            @apply flex items-end;
+        }
+    }
+
+    .wp-block-post-date{
+        @apply uppercase mb-6 pb-1 border-b border-solid border-fnopi-black;
+    }
+}
+
+.news-content{
+    @apply mx-auto max-w-6xl #{!important};
+}
+
+
+
+.related-title{
+    @apply border-b border-solid border-fnopi-black pb-3 mt-14 lg:mt-36 mb-12;
+}
+
+#fnopi-related-news{
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6 xl:gap-12  2xl:gap-36;
+    figure{
+        @apply overflow-hidden;
+        img{
+            @apply transition-transform duration-500;
+        }
+        &:hover{
+            img{
+                @apply scale-105;
+            }   
+        }
+    }
+   
+    time{
+        @apply uppercase border-b border-solid border-black pb-2 mb-4 block text-lg tracking-wider;
+    }
+    .wp-block-post-title{
+        @apply mb-3 px-12;
+    }
+    .wp-block-post-featured-image{
+        @apply mb-6;
+    }
+
+   
+}
