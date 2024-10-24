@@ -77,25 +77,85 @@ class StoriesManager {
       this.loader.classList.remove('flex');
       this.loader.classList.add('hidden');
 
+    
+
       setTimeout(() => {
         if (scrollToTop) {
-        const headerHeight = document.querySelector('header').offsetHeight; // Get the height of the header
-        const containerTop =  this.categoriesContainer.getBoundingClientRect().top + window.pageYOffset - 30;
-        const scrollToPosition = containerTop - headerHeight;
-        window.scrollTo({
-          top: scrollToPosition,
-          behavior: 'smooth'
-        });
-      }
+          const headerHeight = document.querySelector('header').offsetHeight; // Get the height of the header
+          const containerTop = this.categoriesContainer.getBoundingClientRect().top + window.pageYOffset - 30;
+          const scrollToPosition = containerTop - headerHeight;
+          window.scrollTo({
+            top: scrollToPosition,
+            behavior: 'smooth'
+          });
+        }
+
+        // Reinitialize fslightbox after new content is loaded
+        if (typeof refreshFsLightbox === 'function') {
+          console.log('refreshFsLightbox');
+          try {
+            refreshFsLightbox();
+            this.refresTimeLightbox();
+          } catch (error) {
+            console.error('Error reinitializing fslightbox:', error);
+          }
+        }
+
       }, 100);
 
-     
     } catch (error) {
       this.loader.classList.remove('flex');
       this.loader.classList.add('hidden');
       console.error('There has been a problem with your fetch operation:', error);
     }
   };
+
+  refresTimeLightbox(){
+    const fslightboxButtons = document.querySelectorAll('.fslightbox-trigger-cuts');
+    if(fslightboxButtons.length){
+      fslightboxButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          const videoCut = button.getAttribute('data-videocut');
+          const start = button.getAttribute('data-start');
+          const end = button.getAttribute('data-end');
+          // const videoId = button.getAttribute('data-fslightbox');
+          
+          if (typeof Vimeo !== 'undefined') {
+          setTimeout(() => {
+            const iframe = document.querySelector(`.fslightbox-container .story-cut-video`);
+            const player = new Vimeo.Player(iframe);
+            var startTime = start; // Start at 30 seconds
+            var endTime = end;   // End at 60 seconds
+            player.on('loaded', function() {
+              player.setCurrentTime(startTime);
+              player.play();
+            });
+        
+            // Monitor playback time to stop at the end time
+            player.on('timeupdate', function(data) {
+                // Check if the current time is greater than the end time
+                if (data.seconds >= endTime) {
+                    player.pause();  // Pause the video
+                    player.setCurrentTime(endTime); // Prevent scrubbing beyond the end time
+                }
+                // Prevent scrubbing before the start time
+                if (data.seconds < startTime) {
+                    player.setCurrentTime(startTime); // Reset to start time if scrubbed too far back
+                }
+            });
+          }, 200);
+
+            
+          
+          } else {
+            console.error('Vimeo API is not available.');
+          }
+          // console.log(start,end,videoId);
+        });
+      });
+    }
+    
+  }
 
   renderStories(data) {
     const parentElement = this.paginationContainer.parentElement;

@@ -121,9 +121,10 @@ class FnopiRest
         }
     
         $content = '';
+        
         if (count($stories)) {
             foreach ($stories as $story) {
-                $content .= view('partials.infermieri-box', ['story_id' => $story['id']])->render();
+                $content .= view('partials.infermieri-box', ['story_id' => $story['id'], 'term' => $term])->render();
             }
         }
     
