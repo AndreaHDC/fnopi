@@ -22,6 +22,7 @@ if(isset($term) && $term !== 'all'){
 
                     $start_time_key = "cuts_{$i}_start";
                     $end_time_key = "cuts_{$i}_end";
+                    $description_key = "cuts_{$i}_description";
                    
 
                     // Check if the keys exist in the array to avoid errors
@@ -53,7 +54,7 @@ if(isset($term) && $term !== 'all'){
                         $image = $array[$image_key];
                         $start_time = $array[$start_time_key];
                         $end_time = $array[$end_time_key];
-                        
+                        $description = isset($array[$description_key]) ? $array[$description_key] : '';
                         // Get the term of stories-tax by name using $title
                         // $term = get_term_by('name', $title, 'stories-tax');
                         
@@ -63,6 +64,7 @@ if(isset($term) && $term !== 'all'){
                             'image' => $image,
                             'start' => $start_time,
                             'end' => $end_time,
+                            'description' => $description,
                         ];
                     }
                 }
@@ -112,8 +114,12 @@ $filtered_cuts_array = array_values($filtered_cuts_array);
                 allowFullScreen
             ></iframe>
         </div>
-
+        @if ($filtered_cuts_array[0]['description'])
+        <p class="text-white">{!! nl2br($filtered_cuts_array[0]['description']) !!}</p>
+        @else
         <p class="text-white">{!!get_the_excerpt($story_id)!!}</p>
+        @endif
+       
         <a class="text-white font-bold mt-3 inline-block underline hover:no-underline" href="{{get_the_permalink($story_id)}}">Leggi Tutto</a>
     </div>
 

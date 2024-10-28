@@ -21,9 +21,10 @@
                 </a>
             </div>
             {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => '', 'echo' => false]) !!}
-            <button type="button">
+            <div class="w-[150px] hidden xl:block"></div>
+            {{-- <button type="button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="31.595" height="31.603" viewBox="0 0 31.595 31.603"><path d="M35.724,33.808l-8.787-8.87a12.523,12.523,0,1,0-1.9,1.925l8.73,8.812a1.352,1.352,0,0,0,1.909.049A1.361,1.361,0,0,0,35.724,33.808ZM17.1,26.971a9.888,9.888,0,1,1,6.994-2.9A9.827,9.827,0,0,1,17.1,26.971Z" transform="translate(-4.5 -4.493)" fill="#b3c8cd"/></svg>
-            </button>
+            </button> --}}
         </div>
     </div>
 
