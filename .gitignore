@@ -30,6 +30,7 @@
 /wp-content/plugins/*
 /wp-content/mu-plugins/*
 !wp-content/themes/fnopi-theme
+wp-content/themes/fnopi-theme/deploy.txt
 # Log files
 *.log
 
