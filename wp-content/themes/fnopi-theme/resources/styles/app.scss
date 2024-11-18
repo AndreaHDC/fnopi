@@ -63,3 +63,11 @@ article > *:not(.entry-content),
 .alignwide{
     max-width: 1920px;
 }
+
+
+//fix 6.7
+.wp-block-image{
+    a{
+        display: inline !important;
+    }
+}
