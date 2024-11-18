@@ -51,7 +51,7 @@
     .content{
         @apply max-w-[900px] mx-auto;
         a{
-            @apply inline-block mt-6 font-bold underline hover:no-underline;
+            @apply inline mt-6 font-bold underline hover:no-underline;
         }
     }
 
