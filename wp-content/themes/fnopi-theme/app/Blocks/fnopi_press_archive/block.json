@@ -1,0 +1,14 @@
+{
+    "name": "fnopi/pressarchive",
+    "title": "Fnopi Press Archive",
+    "description": "The Fnopi Press Archive",
+    "style": [],
+    "category": "theme",
+    "icon": "slides",
+    "keywords": ["fnopi","press","archive"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "fnopi_press_archive_block_render_callback"
+    },
+    "align": "full"
+}

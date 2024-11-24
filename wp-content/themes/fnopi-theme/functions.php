@@ -120,3 +120,8 @@ function  fnopi_related_news_block_render_callback($block)
 {
     echo view('blocks/fnopi_related_news', ['block' => $block]);
 }
+
+function  fnopi_press_archive_block_render_callback($block)
+{
+    echo view('blocks/fnopi_press_archive', ['block' => $block]);
+}

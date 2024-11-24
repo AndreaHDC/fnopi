@@ -40,7 +40,7 @@ add_image_size('news-thumb', 400, 700, true);
 add_action('init', 'App\\register_acf_blocks');
 function register_acf_blocks()
 {
-    $custom_blocks = ['fnopi_related_news','fnopi_video_reference','fnopi_related','fnopi_terms','fnopi_story_video','fnopi_stories_archive','fnopi_timeline_archive','fnopi_timeline_home','fnopi_video','fnopi_grid','fnopi_stories'];
+    $custom_blocks = ['fnopi_press_archive','fnopi_related_news','fnopi_video_reference','fnopi_related','fnopi_terms','fnopi_story_video','fnopi_stories_archive','fnopi_timeline_archive','fnopi_timeline_home','fnopi_video','fnopi_grid','fnopi_stories'];
     foreach ($custom_blocks as $custom_block) {
         register_block_type(__DIR__ . '/Blocks/'.$custom_block);
         $function = $custom_block.'_block_render_callback';
