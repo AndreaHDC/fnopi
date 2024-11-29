@@ -37,7 +37,8 @@
                 "id": ""
             },
             "post_type": [
-                "milestone"
+                "milestone",
+                "story"
             ],
             "post_status": [
                 "publish"
@@ -72,5 +73,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723381329
+    "modified": 1732903271
 }
