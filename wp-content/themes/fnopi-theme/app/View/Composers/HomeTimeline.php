@@ -42,7 +42,7 @@ class HomeTimeline extends Composer
             'post__in'       => $ids,  // Add this line to filter by IDs
             'meta_key'       => 'date',
             'orderby'        => 'meta_value',
-            'order'          => 'DESC',
+            'order'          => 'ASC',
             'meta_type'      => 'DATE',  // Specify the meta_type as DATE for proper date handling
         );
 
