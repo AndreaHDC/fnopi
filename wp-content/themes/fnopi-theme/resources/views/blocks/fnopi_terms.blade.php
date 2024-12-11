@@ -10,7 +10,7 @@ $terms = wp_get_post_terms(get_the_id(), $taxonomy);
 
 @endphp
 <section {{$anchor}}>
-    <div id="fnopi-terms">
+    {{-- <div id="fnopi-terms">
         @if (!empty($terms) && !is_wp_error($terms))
             <ul class="flex gap-3 flex-wrap">
                 @foreach ($terms as $term)
@@ -23,5 +23,5 @@ $terms = wp_get_post_terms(get_the_id(), $taxonomy);
         @else
         No Tags Found, add some
         @endif
-    </div>
+    </div> --}}
 </section>
