@@ -195,16 +195,17 @@
 
     .swiper-slide{
         height: auto !important;
-        span{
-            @apply text-fnopi-dark-blue block font-fnopi-heading text-5xl border-b border-solid border-black px-4;
+
+        .main-year{
+            @apply bg-fnopi-dark-blue text-white rounded-full aspect-square w-[100px] h-[100px] flex items-center justify-center text-2xl lg:text-3xl font-fnopi-heading relative;
+            
+            transform: translate(-25%, 50%);
+            z-index: 100;
         }
 
         .content{
-            @apply border-l border-solid border-black pt-12 relative h-full;
-            &::before{
-                @apply absolute left-[-5px] top-[-5px] bg-black w-[10px] h-[10px] rounded-full;
-                content: "";
-            }
+            @apply border-l border-t border-t-fnopi-dark-blue border-solid border-black pt-24 relative h-full;
+            
         }
     }
 
@@ -219,6 +220,7 @@
 
         span{
             @apply font-fnopi-heading text-fnopi-dark-blue text-xl;
+            
         }
 
         .swiper-scrollbar-drag{

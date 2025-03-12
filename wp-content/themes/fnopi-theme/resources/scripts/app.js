@@ -113,7 +113,7 @@ domReady(async () => {
     slidesPerView: 1.5,
     spaceBetween: 0,
     speed: 1500,
-    slidesOffsetBefore:5,
+    slidesOffsetBefore:30,
     slidesOffsetAfter:5,
 
     breakpoints: {
@@ -121,13 +121,14 @@ domReady(async () => {
       768: {
         slidesPerView: 3,
         spaceBetween: 30,
-        slidesOffsetBefore:20,
+        slidesOffsetBefore:50,
         slidesOffsetAfter:20,
       },
 
       1281: {
         slidesPerView: 5,
         spaceBetween: 0,
+        slidesOffsetBefore:50,
       },
     },
 

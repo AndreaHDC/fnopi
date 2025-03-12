@@ -16,19 +16,19 @@ sort($years);
                 <div class="swiper-scrollbar w-full overflow-hidden"></div>
                 <span>{{end($years)}}</span>
             </div>
+
             <div class="swiper-wrapper">
                 @foreach ($milestones as $year => $items)
                 <div class="swiper-slide">        
-                    <span>{{$year}}</span>
+                    <div class="main-year">{{$year}}</div>
+
+                    
                     <div class="content">
                         @foreach ($items as $step)
                             <div class="pl-4 pr-10 mb-12">
                                 <a href="{{$step['link']}}">
-                                    <div class="overflow-hidden">
-                                        {!! wp_get_attachment_image($step['image'], 'square', false, ['class' => 'w-full h-auto  transition-transform duration-500 hover:scale-110']) !!}
-                                    </div>
+                                    <h4 class="uppercase font-bold text-sm mt-3 text-fnopi-dark-blue hover:underline">{!!$step['title']!!}</h4>
                                 </a>
-                                <h4 class="uppercase font-bold text-sm mt-3">{!!$step['title']!!}</h4>
                                 <p class="text-sm mt-3">{!!$step['content']!!}</p>
                             </div>
                         @endforeach
