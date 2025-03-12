@@ -26,10 +26,10 @@ sort($years);
                     <div class="content">
                         @foreach ($items as $step)
                             <div class="pl-4 pr-10 mb-12">
-                                <a href="{{$step['link']}}">
-                                    <h4 class="uppercase font-bold text-sm mt-3 text-fnopi-dark-blue hover:underline">{!!$step['title']!!}</h4>
+                                <a href="{{$step['link']}}" class="mb-0">
+                                    <h4 class="uppercase font-bold text-sm mt-3 mb-3 text-fnopi-dark-blue hover:underline">{!!$step['title']!!}</h4>
                                 </a>
-                                <p class="text-sm mt-3">{!!$step['content']!!}</p>
+                                {!!$step['content']!!}
                             </div>
                         @endforeach
                     </div>
