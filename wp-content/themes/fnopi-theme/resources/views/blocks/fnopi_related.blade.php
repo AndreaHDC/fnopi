@@ -8,7 +8,7 @@ $title = get_field('title');
 $related = get_field('related');
 @endphp
 <section {{$anchor}}>
-    @if (count($related))
+    @if ($related && count($related))
         <div id="fnopi-related" class="pb-[50px] lg:pb-[100px] mx-auto max-w-screen-xl">
             <h3 class="italic text-4xl mb-6">{!!$title!!}</h3>
             @foreach ($related as $id)
