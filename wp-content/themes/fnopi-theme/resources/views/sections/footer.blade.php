@@ -39,13 +39,13 @@
                 <p class="text-sm">©{{date('Y')}} FNOPI</p>
                 <ul class="flex gap-3 uppercase text-sm">
                     <li>
-                        <a class="hover:underline" href="#">Privacy Policy</a>
+                        <a class="hover:underline iubenda-nostyle no-brand iubenda-noiframe iubenda-embed iubenda-noiframe" title="Privacy Policy " href="https://www.iubenda.com/privacy-policy/75861204">Privacy Policy</a>
                     </li>
                     <li>
                        |
                     </li>
                     <li>
-                        <a class="hover:underline"href="#">Cookie Policy</a>
+                        <a class="hover:underline iubenda-nostyle no-brand iubenda-noiframe iubenda-embed iubenda-noiframe" title="Cookie Policy " href="https://www.iubenda.com/privacy-policy/75861204/cookie-policy">Cookie Policy</a>
                     </li>
                 </ul>
             </div>
@@ -56,4 +56,8 @@
             
         </div>
     </div>
+
+
+    <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+    <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 </footer>
