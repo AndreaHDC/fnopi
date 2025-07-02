@@ -31,6 +31,11 @@ if(isset($term) && $term !== 'all'){
                         $slug = '';
                         switch($title){
                             // "title": "Perch\u00e8 ho scelto di fare l\u2019infermiere",
+
+                            case 'Perchè ho scelto di fare l’infermiera':
+                                $slug = 'la-scelta-di-essere-infermiere';
+                                break;
+
                             case 'Perchè ho scelto di fare l’infermiere':
                                 $slug = 'la-scelta-di-essere-infermiere';
                                 break;
