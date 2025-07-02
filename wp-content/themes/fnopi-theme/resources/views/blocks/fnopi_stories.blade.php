@@ -67,7 +67,7 @@ if (!$stories) {
             @if ($categories && count($categories))
                 <div class="lg:pl-[100px] mt-12">
                     <div class="title-temi text-white flex flex-col md:flex-row justify-end">
-                        <a href="http://">ESPLORA PER TEMI</a>
+                        <a href="{{home_url()}}/infermieri/">ESPLORA PER TEMI</a>
                     </div>
                 </div>
                 <div class="grid md:grid-cols-3 gap-10 md:gap-6 mt-12 animate-top">

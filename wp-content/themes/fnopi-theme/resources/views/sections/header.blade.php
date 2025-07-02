@@ -17,7 +17,7 @@
         <div class="hidden md:flex overflow-hidden alignwide border-y border-y-fnopi-gray mx-auto mt-[25px] pt-[15px] pb-[15px]  justify-between items-center">
             <div id="logo-scroll">
                 <a href="{{home_url()}}/">
-                    <img class="w-[205px] h-auto" src="{{asset('/images/main-logo-min.svg')}}" alt="{{$siteName}}">
+                    <img class="w-[205px] h-auto" src="{{asset('/images/main-logo-min.png')}}" alt="{{$siteName}}">
                 </a>
             </div>
             {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => '', 'echo' => false]) !!}

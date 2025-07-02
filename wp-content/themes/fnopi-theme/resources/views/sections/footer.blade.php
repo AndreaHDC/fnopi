@@ -32,7 +32,7 @@
         <div class="alignwide mx-auto px-6 lg:px-[60px] 2xl:px-[120px] flex flex-col lg:flex-row items-center lg:items-end justify-between">
 
             <div class="flex gap-4 lg:gap-10 items-center lg:items-end flex-col lg:flex-row">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.fnopi.it/" target="_blank" rel="noopener noreferrer">
                     <img class="w-[215px] h-auto" src="{{asset('/images/fnopi-logo.png')}}" alt="FNOPI">
                 </a>
 
@@ -51,7 +51,7 @@
             </div>
 
             <div class="text-right mt-6 lg:mt-0">
-                <p class="text-sm">Design & Development: <a href="https://" target="_blank" rel="noopener noreferrer">VIVA!</a></p>
+                <p class="text-sm">Design & Development: <a href="https://www.vivaonweb.com" target="_blank" rel="noopener noreferrer">VIVA!</a></p>
             </div>
             
         </div>
