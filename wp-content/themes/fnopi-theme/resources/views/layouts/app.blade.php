@@ -2,6 +2,16 @@
 <html @php(language_attributes())>
   <head>
 
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B730WZBTN1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B730WZBTN1');
+    </script>
+
       <script type="text/javascript">
       var _iub = _iub || [];
       _iub.csConfiguration = {"siteId":4132364,"cookiePolicyId":75861204,"lang":"it","storage":{"useSiteId":true}};
